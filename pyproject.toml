@@ -1,0 +1,21 @@
+[project]
+name = "digikala-tools"
+version = "0.1.0"
+description = "Digikala Tools for LLMs"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "fake-useragent>=2.2.0",
+    "langchain-core>=0.3.59",
+    "pydantic>=2.11.4",
+    "requests>=2.32.3",
+]
+
+[dependency-groups]
+dev = [
+    "ipykernel>=6.29.5",
+    "ipywidgets>=8.1.7",
+    "langchain-openai>=0.3.16",
+    "langgraph>=0.4.3",
+    "python-dotenv>=1.1.0",
+]
