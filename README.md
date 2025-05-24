@@ -36,7 +36,11 @@ uv sync --no-dev
 
 ## Usage
 
-Currently the only tool availabe is *digikala_search_tool* for [LangChain](https://www.langchain.com/) You can import it as follow:
+Currently the only tool availabe is *digikala_search*
+
+### LangChain
+
+for [LangChain](https://www.langchain.com/) You can import it as follow:
 
 ```python
 from digikala_tools.langchain_tools import get_digikala_search_tool
@@ -51,3 +55,11 @@ digikala_search_tool = get_digikala_search_tool(return_direct=True)
 ```
 
 Refer to [usage.ipynb](./usage.ipynb) to see the tool in action.
+
+### MCP Server
+
+To run Model Context Protocol (MCP) server use following command:
+
+```bash
+mcp dev digikala_mcp_server.py
+```
