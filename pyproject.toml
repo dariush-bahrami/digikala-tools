@@ -7,6 +7,7 @@ requires-python = ">=3.12"
 dependencies = [
     "fake-useragent>=2.2.0",
     "langchain-core>=0.3.59",
+    "mcp[cli]>=1.9.1",
     "pydantic>=2.11.4",
     "requests>=2.32.3",
 ]
