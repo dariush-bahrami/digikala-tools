@@ -1,28 +1,4 @@
-from typing import List
-
-from pydantic import BaseModel, Field, HttpUrl
-
-
-class ProductRating(BaseModel):
-    rate: float = Field(
-        ..., description="Average user rating as a percentage (e.g., 89.6 means 89.6%)"
-    )
-    count: int = Field(..., description="Total number of user ratings for the product")
-
-
-class SearchResultProduct(BaseModel):
-    product_id: int = Field(..., description="Unique identifier of the product")
-    title_fa: str = Field(..., description="Product title in Persian (Farsi)")
-    title_en: str = Field(..., description="Product title in English")
-    url: HttpUrl = Field(..., description="Direct URL to the product page")
-    image_urls: List[HttpUrl] = Field(
-        ..., description="List of URLs for product images"
-    )
-    rating: ProductRating = Field(
-        ..., description="Nested object containing average rating and number of votes"
-    )
-    price: int = Field(..., description="Product price in Iranian Toman")
-    category: str = Field(..., description="Product Category")
+from .pydantic_models import ProductRating, SearchResultProduct
 
 
 def process_search_result(search_resul: dict) -> list[SearchResultProduct]:
